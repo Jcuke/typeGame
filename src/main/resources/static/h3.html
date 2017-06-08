@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<script src="js/g.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html, body {
+            /*background-color: #25272b;*/
+            /*background-image: url(body3.jpg);*/
+            background-position: 0px 0px;
+            background-attachment: fixed;
+            /*background-repeat: no-repeat;*/
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            -webkit-background-size: auto;
+            color: #fff;
+            font-family: helvetica, arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12pt
+        }
+
+        #canvas {
+            border: 1px solid #555;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /*background-color: #000*/
+        }
+
+        #canvas {
+            border: 1px solid #555;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /*background-color: #000*/
+        }
+
+        #game {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 460px;
+            height: 640px
+        }
+    </style>
+</head>
+<body>
+<div id="game" height="640" width="460">
+
+</div>
+<canvas id="canvas2" style="cursor: auto;" height="100" width="400">
+</canvas>
+<font color="red">
+    <div id="displayInfo" style="width: 200px; height: 50px;z-index: 3;position: absolute;top: 200px;left: 200px;background-color: gray;font-family: fantasy;">
+        <button>感动中国 大声</button>
+    </div>
+</font>
+</body>
+<script>
+
+    var fonth = 26;
+
+    $('#game').append('<button id="btn">中国</button>');
+
+    var x = 150;
+    var y = 500;
+    $('#game').append('<button id="btn" style="position: absolute;top: "+ x +"px;left:"+ y +"px;">中国</button>');
+
+
+
+    function drawObj() {
+        var x = 150;
+        var y = 50;
+        var w = 0;
+        var h = fonth;
+
+        setInterval(function () {
+            x += 10;
+            x += 20;
+
+            $('#game').append('<button id="btn" style="position: absolute;top: "+ x +"px;left:"+ y +"px;">中国</button>');
+
+        }, 200);
+    }
+    setInterval(function () {
+        drawObj();
+    }, 2000);
+
+</script>
+</html>
